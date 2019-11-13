@@ -1,0 +1,14 @@
+{
+  "name": "neaps-website-pr",
+  "engines": {
+    "node": "10"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^16.35.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0"
+  }
+}
