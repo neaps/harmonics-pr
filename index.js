@@ -1,7 +1,7 @@
 require('dotenv').config()
 const Octokit = require('@octokit/rest')
 const http = require('http')
-const port = process.env.NEAPS_PORT ? process.env.NEAPS_PORT : 80
+const port = process.env.PORT ? process.env.PORT : 80
 const cors = require('cors')({
   origin: true
 })
@@ -74,6 +74,6 @@ server.on('clientError', (err, socket) => {
 
 server.listen(port)
 
-console.log(`Neaps PR server listening on ${process.env.NEAPS_PORT}`)
+console.log(`Neaps PR server listening on ${process.env.PORT}`)
 
 module.exports = server
