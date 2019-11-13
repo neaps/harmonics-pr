@@ -59,11 +59,9 @@ const server = http.createServer((request, response) => {
         body: `Requested by ${contact.email}`,
         maintainer_can_modify: true
       })
-      response.send({ error: false, url: pr.data.html_url })
-      response.end()
+      response.end(JSON.stringify({ error: false, url: pr.data.html_url }))
     } catch {
-      response.send({ error: true })
-      response.end()
+      response.end(JSON.stringify({ error: true }))
     }
   })
 })
